@@ -21,4 +21,5 @@ from disqdb import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/pitch/', views.add_pitch_reading, name='add_pitch_reading'),
+    path('api/record_test/', views.record_test_run, name='record_test_run'),
 ]
