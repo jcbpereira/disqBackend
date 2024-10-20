@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import environ
+import os
 
 env = environ.Env()
 environ.Env.read_env()
@@ -33,7 +34,7 @@ ALLOWED_HOSTS = [
     '13.51.69.148',
     'localhost',
     '127.0.0.1',
-    'c063-85-255-235-12.ngrok-free.app',
+    'ea1b-85-255-236-22.ngrok-free.app',
 ]
 
 
@@ -97,7 +98,8 @@ DATABASES = {
          'HOST': env("DB_HOST_AWS"),
          'PORT': env("DB_PORT")
      },
-    # 'local': {
+    # Local DB:
+    # 'default': { 
     #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
     #     'NAME': env("DB_NAME"),
     #     'USER': env("DB_USER"),
