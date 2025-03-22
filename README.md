@@ -46,6 +46,13 @@ Set up the environment variables: Create a .env file in the project root directo
 
 1.  **Connect to local DB**:
 
+    Setttings.py should point to local DB
+
+    Activate your virtual env and run the development server
+    ```sh
+    python manage.py runserver
+    ```
+
 2. **Tunelling for development**:
 
     Run
@@ -56,3 +63,15 @@ Set up the environment variables: Create a .env file in the project root directo
     ```sh
     Forwarding                    https://2a04-148-252-146-117.ngrok-free.app -> http://localhost:8000   
     ```
+
+    Update your allowed hosts in settings.py to include the ngork url
+
+### Running in EC2
+
+1. **ssh into EC2 instance**
+
+ssh -i "disq-ec2.pem" ec2-user@ec2-13-51-69-148.eu-north-1.compute.amazonaws.com
+
+2. **Run Server**
+
+python3 manage.py runserver 0.0.0.0:8000
