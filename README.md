@@ -64,7 +64,8 @@ Set up the environment variables: Create a .env file in the project root directo
     Forwarding                    https://2a04-148-252-146-117.ngrok-free.app -> http://localhost:8000   
     ```
 
-    Update your allowed hosts in settings.py to include the ngork url
+    Update your allowed hosts in settings.py to include the ngork url.
+    I then need to launch the server after thins once I updated the settings.
 
 ### Running in EC2
 
