@@ -34,7 +34,7 @@ ALLOWED_HOSTS = [
     '13.51.69.148',
     'localhost',
     '127.0.0.1',
-    'ea1b-85-255-236-22.ngrok-free.app',
+    '6f43-85-255-233-37.ngrok-free.app',
 ]
 
 
@@ -90,23 +90,23 @@ WSGI_APPLICATION = 'disqBackend.wsgi.application'
 SECRET_KEY = env("SECRET_KEY")
 ...
 DATABASES = {
-    'default': {
-         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-         'NAME': env("DB_NAME"),
-         'USER': env("DB_USER"),
-         'PASSWORD':env("DB_PASSWORD_AWS"),
-         'HOST': env("DB_HOST_AWS"),
-         'PORT': env("DB_PORT")
-     },
+    # 'default': {
+    #      'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    #      'NAME': env("DB_NAME"),
+    #      'USER': env("DB_USER"),
+    #      'PASSWORD':env("DB_PASSWORD_AWS"),
+    #      'HOST': env("DB_HOST_AWS"),
+    #      'PORT': env("DB_PORT")
+    #  },
     # Local DB:
-    # 'default': { 
-    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    #     'NAME': env("DB_NAME"),
-    #     'USER': env("DB_USER"),
-    #     'PASSWORD': env("DB_PASSWORD_LOCAL"),
-    #     'HOST': env("DB_HOST_LOCAL"),
-    #     'PORT': env("DB_PORT"),
-    # }
+    'default': { 
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': env("DB_NAME"),
+        'USER': env("DB_USER"),
+        'PASSWORD': env("DB_PASSWORD_LOCAL"),
+        'HOST': env("DB_HOST_LOCAL"),
+        'PORT': env("DB_PORT"),
+    }
 }
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
